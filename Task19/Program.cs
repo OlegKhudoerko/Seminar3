@@ -8,19 +8,18 @@
 
 // 23432 -> да
 
-
+////////////////////////////////////////////////////////////////////////////////////
+Console.Write("Вариант 1");//Решаем через вычисление
 Console.Write("Введите пятизначное число: ");
 int A = Convert.ToInt32(Console.ReadLine());
 
-// int B = (A/10000)%10;
-// int C = (A/1000)%10;
-// int E = (A/10)%10;
+if ((A / 10000) % 10 == A % 10 && (A / 1000) % 10 == (A / 10) % 10) Console.WriteLine($"{A} -> да");
+else Console.WriteLine($"{A} -> нет");
+////////////////////////////////////////////////////////////////////////////////////
 
-// int D = A%10;
-// Console.WriteLine(B);
-// Console.WriteLine(C);
-// Console.WriteLine(E);
+Console.Write("Вариант 2");//Решаем через сравнение в строке
+Console.Write("Введите пятизначное число: ");
+string B = Console.ReadLine();
 
-// Console.WriteLine(D);
-if ((A/10000)%10 == A%10 && (A/1000)%10 ==(A/10)%10) Console.WriteLine($"{A} -> да");
-else  Console.WriteLine($"{A} -> нет");
+if (B[0] == B[4] && B[1] == B[3]) Console.WriteLine($"{B} -> да");
+else Console.WriteLine($"{B} -> нет");
